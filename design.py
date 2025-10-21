@@ -198,18 +198,17 @@ def chess_pattern(N: int, color_first: str, color_second: str):
        for col in range(N):
            colors.append(color_second)
            colors.append(color_first)
-   else:
-       for row in range(N):
-           # Изначальный цвет для строки: чередуемся по строкам
-           if row % 2 == 0:
-               color = color_first
-           else:
-               color = color_second
-
+      else:
+       for i in range((N - 1) // 2):
            for col in range(N):
-               colors.append(color)
-               # Чередуем цвета
-               color = color_second if color == color_first else color_first
+               colors.append(color_first)
+               colors.append(color_second)
+           for col in range(N):
+               colors.append(color_second)
+               colors.append(color_first)
+       for i in range(N):
+           color = color_first if i % 2 == 0 else color_second
+           colors.append(color)
    return colors
 
 
