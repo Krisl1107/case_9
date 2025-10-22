@@ -47,7 +47,7 @@ def get_valid_color_from_user(prompt: str) -> str:
                 print(f'{lcl.ERROR_UNKNOWN_COLOR}')
 
 
-def get_color_choice() -> tuple:
+def get_color_choice():
     """
     Allows user to select two colors from predefined options or custom HEX/English names.
 
